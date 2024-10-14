@@ -12,18 +12,30 @@
 
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form action="/action_page.php">
+  <form action="{{ route('formdata') }}" method="POST">
+    @csrf
+    
+
     <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-    </div>
-    <div class="checkbox">
-      <label><input type="checkbox" name="remember"> Remember me</label>
-    </div>
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter name" name="name">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="email">email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+
+      <div class="form-group">
+        <label for="father name">Fathers Name:</label>
+        <input type="text" class="form-control" id="email" placeholder="Enter Father Name" name="father_name">
+      </div>
+   
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
 </div>
